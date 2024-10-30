@@ -15,7 +15,7 @@ export const pureAddUser = (name: string, setError: any, setName: (name:string)=
         setName('')}
 }
 
-export const pureOnBlur = (name: string, setError:(error :string|null)=>void) => { 
+export const pureOnBlur = (name: string, setError:(error :string)=>void) => { 
     name.trim()===''&&setError("Ошибка! Введите имя!")// если имя пустое - показать ошибку
 }
 
@@ -37,7 +37,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
 }) => {
     // деструктуризация пропсов
     const [name, setName] = useState<string>('') // need to fix any
-    const [error, setError] = useState<string|null>('') // need to fix any
+    const [error, setError] = useState<string>('') // need to fix any
 
     const setNameCallback = (event: ChangeEvent<HTMLInputElement>) => { // need to fix any
         setName(event.currentTarget.value) // need to fix
@@ -58,7 +58,6 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
 
     const totalUsers = users.length // need to fix
     const lastUserName=users.length>0?users[totalUsers-1].name:''
-    console.log('last USER', lastUserName )// need to fix
 
     return (
         <Greeting
