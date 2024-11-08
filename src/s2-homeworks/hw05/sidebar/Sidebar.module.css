@@ -8,9 +8,11 @@
 }
 
 .nav {
+    color:teal
 }
 
 .nav a {
+  color: red
 }
 
 .nav a:hover {
