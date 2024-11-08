@@ -8,20 +8,29 @@
 }
 
 .nav {
-    color:teal
+  color: teal;
+  display: flex;
+  flex-direction: column;
 }
 
 .nav a {
-  color: red
+  color: red;
 }
-
+.nav a {
+  color: red;
+}
 .nav a:hover {
+  color: violet;
 }
 
 .nav a.active {
+  color: green;
 }
 .close {
 }
 
 .close img {
+}
+
+.background {
 }
