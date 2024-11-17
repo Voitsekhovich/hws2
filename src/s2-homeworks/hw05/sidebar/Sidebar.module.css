@@ -1,4 +1,6 @@
 .sidebar {
+
+
 }
 
 .sidebar.open {
@@ -27,6 +29,8 @@
   color: green;
 }
 .close {
+  display: flex;
+  flex-direction: row;
 }
 
 .close img {
