@@ -27,8 +27,7 @@ const SuperButton: React.FC<SuperButtonPropsType> = ({
       :  s.default) + (className
       ? " " + className : "")
      ; // задачка на смешивание классов
-  console.log(disabled);
-  console.log(finalClassName)
+
   return (
     <button
       disabled={disabled}

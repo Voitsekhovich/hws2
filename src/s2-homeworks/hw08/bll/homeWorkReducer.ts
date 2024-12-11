@@ -14,6 +14,8 @@ export const homeWorkReducer = (state: UserType[], action: ActionType): UserType
                 else return 0 
             })// need to fix
             return action.payload === 'up'? newState: newState.reverse()
+
+
         }
         case 'check': {
 
