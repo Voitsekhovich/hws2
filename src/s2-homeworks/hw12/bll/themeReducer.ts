@@ -21,9 +21,9 @@ type changeThemeIdType ={
 
 
 export const changeThemeId = (id: number):changeThemeIdType => ({
-    type: 'SET_THEME_ID' as const ,
+    type: 'SET_THEME_ID'  ,
     id,
-})
+}as const)
 
 
 type ActionType = ChangeThemeIdType
