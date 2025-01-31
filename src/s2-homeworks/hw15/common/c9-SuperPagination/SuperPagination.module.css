@@ -1,11 +1,12 @@
 .pagination {
     display: flex;
+  
 }
 
 .text1 {
-
+color:teal
 }
 
 .text2 {
-
+color:tomato
 }
