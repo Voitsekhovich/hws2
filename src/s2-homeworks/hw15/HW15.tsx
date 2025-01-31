@@ -51,7 +51,7 @@ const HW15 = () => {
         setLoading(true)
         getTechs(params)
             .then((res) => {
-  
+
                 if (res) {
                     setTechs(res.data.techs)
                     setTotalCount(res.data.totalCount)
@@ -61,28 +61,19 @@ const HW15 = () => {
     }
 
     const onChangePagination = (newPage: number, newCount: number) => {
-        // делает студент
-
+        // делает студен
         setPage(newPage)
         setCount(newCount)
-
         sendQuery({ page: newPage, count: newCount })
-        //setSearchParams(page,count)
-
+        setSearchParams({ sort, page: newPage.toString(), count: newCount.toString() })
         //
     }
 
     const onChangeSort = (newSort: string) => {
-        debugger
         setSort(newSort)
         setPage(1)
-        const sortQuery: { sort?: string } = newSort !== '' ? { sort: newSort } : {}
-        // localhost:3000?
-        const { sort, page, ...lastQueries } = Object.fromEntries(searchParams)
-        const allQuery = { ...lastQueries, ...sortQuery }
-
-        sendQuery(allQuery)
-        setSearchParams(allQuery)
+        sendQuery({ sort: newSort, page, count })
+        setSearchParams({ sort: newSort, page: page.toString(), count: count.toString() })
 
     }
 
